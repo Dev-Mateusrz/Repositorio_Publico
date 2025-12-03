@@ -1,0 +1,232 @@
+@font-face {
+  font-family: 'Benguiat';
+  src: url('/Aulas/Aula05/fontes/benguiat.woff') format('woff');
+}
+
+body {
+  background: black;
+  margin: 0;
+  overflow: hidden;
+  font-family: Arial, sans-serif;
+}
+
+/* ----- CONTÊINER DAS PARTÍCULAS ----- */
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0; /* em vez de -1 */
+}
+
+/* ----- PARTÍCULA INDIVIDUAL ----- */
+.particle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  opacity: 0.4;
+  animation: floatUp linear infinite;
+}
+
+/* ----- ANIMAÇÃO ----- */
+@keyframes floatUp {
+  0% {
+    transform: translateY(110vh) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(-10vh) scale(0.4);
+    opacity: 0;
+  }
+}
+
+/* ROTAÇÃO */
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(var(--spinTilt));
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+
+/* ----- NOVO: PISCAR SUAVE ----- */
+.menu-item:hover {
+  animation: blink 0.2s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0% {
+    opacity: 1;
+    text-shadow: 0 0 8px red;
+  }
+  50% {
+    opacity: 0.4;
+    text-shadow: 0 0 20px rgb(255, 50, 50);
+  }
+  100% {
+    opacity: 1;
+    text-shadow: 0 0 8px red;
+  }
+}
+
+header {
+  height: 350px;
+  overflow: hidden;
+  z-index: 10; /* menu acima das partículas */
+}
+
+header img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+}
+
+header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 370px;
+  background: rgba(0, 0, 0, 0.7); /* escurece */
+}
+
+ul {
+  position: absolute;
+  top: 20px;
+  right: 50px;
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+li a {
+  text-decoration: none;
+  color: white;
+  font-family: Arial, sans-serif;
+  font-size: 1.2em;
+  transition: color 0.3s, transform 0.5s ease;
+  display: inline-block;
+  will-change: transform, color;
+}
+
+li a:hover {
+  color: #ff0000;
+  transform: scaleY(-1);
+  animation: eletrico 0.12s infinite alternate steps(2);
+  animation-fill-mode: forwards;
+}
+
+div#titulo-header {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+
+#pagina_personagens {
+  color: white;
+  background-color: rgb(0, 0, 0);
+}
+
+h1 {
+  font-family: 'Benguiat', serif;
+  font-size: 4em;
+  text-align: center;
+  -webkit-text-stroke: #8b0000; /* contorno escuro */
+  text-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff1a1a, 0 0 10px #ff1a1a;
+}
+
+.letra-grande {
+  font-size: 1.8em;
+}
+
+#s_grande {
+  position: relative;
+  left: 20px;
+}
+
+#r_grande {
+  position: relative;
+  right: 20px;
+}
+
+.pequeno {
+  font-size: 1.3em;
+  position: relative;
+  bottom: 20px;
+}
+.things-pequeno {
+  position: relative;
+  font-size: 1.3em;
+  bottom: 80px;
+}
+
+#hr_cima {
+  position: relative;
+  top: 50px;
+  width: 460px;
+  border: none;
+  height: 5px;
+  background: #000000;
+  box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff1a1a, 0 0 10px #ff1a1a;
+}
+#hr_baixo_s {
+  position: relative;
+  bottom: 185px;
+  right: 198px;
+  width: 70px;
+  border: none;
+  height: 5px;
+  background: #000000;
+  box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff1a1a, 0 0 10px #ff1a1a;
+}
+
+#hr_baixo_r {
+  position: relative;
+  bottom: 200px;
+  left: 200px;
+  width: 90px;
+  border: none;
+  height: 5.5px;
+  background: #000000;
+  box-shadow: 0 0 5px #ff0000, 0 0 5px #ff0000, 0 0 5px #ff1a1a, 0 0 10px #ff1a1a;
+}
+
+/* =======================
+   BOTÃO DE SOM
+======================= */
+#sound-toggle {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: rgba(0, 0, 0, 0.6);
+  border: 2px solid red;
+  color: white;
+  font-size: 28px;
+  padding: 10px 14px;
+  cursor: pointer;
+  border-radius: 10px;
+  transition: 0.3s;
+  backdrop-filter: blur(4px);
+}
+
+#sound-toggle:hover {
+  background: rgba(255, 0, 0, 0.6);
+  transform: scale(1.15);
+  text-shadow: 0 0 10px red;
+}
+
+#teste {
+  position: relative;
+  top: 500px;
+}

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt=BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formatações HTML5</title>
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    h1 {
+      text-align: center;
+    }
+
+    span {
+      color: rgb(255, 0, 0);
+      font-weight: bold;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Formatações de Texto</h1>
+  <h2>Negrito / Itálico</h2>
+  <p>Utilizamos a tag <span>&lt;STRONG&gt;</span> para <strong>NEGRITO</strong> e a tag &lt;<span>EM</span>&gt; para
+    <em><strong>ITÁLICO</strong></em>.</p>
+  <hr>
+  <h2>Texto Marcado / Texto Grande e Pequeno </h2>
+  <p>Utilizamos a tag <span>&lt;MARK&gt;</span> para <mark><strong>MARCAR</strong></mark>. Utilizamos a tag
+    &lt;<span>BIG</span>&gt; para <big><strong>DEIXAR TEXTO GRANDE</strong></big> e a tag &lt;<span>SMALL</span>&gt;
+    para <small><strong>DEIXAR TEXTO PEQUENO</strong></small>.</p>
+  <hr>
+  <h2>Texto Deletado / Texto Inserido </h2>
+  <p>Utilizamos a tag <span>&lt;DEL&gt;</span> para <del><strong>TEXTO DELETADO</strong></del> e a tag
+    &lt;<span>INS</span>&gt; para <ins><strong>TEXTO INSERIDO</strong></ins>.</p>
+  <hr>
+  <h2>Texto Sobrescrito / Texto Subscrito </h2>
+  <p>Utilizamos a tag <span>&lt;SUP&gt;</span> para <sup><strong>TEXTO SOBRESCRITO</strong></sup> e a tag
+    &lt;<span>SUB</span>&gt; para <sub><strong>TEXTO SUBSCRITO</strong></sub>.</p>
+  <hr>
+  <h1>Formatações de Texto Extras</h1>
+  <h2>Código-Fonte</h2>
+  <p>Utilizamos a tag <span>&lt;CODE&gt;</span> para códigos:
+    <code><strong>document.getElementById("teste")</strong></code></p>
+  <p>Utilizamos a tag <span>&lt;PRE&gt;</span> para códigos com formatação preservada:</p>
+  <strong>
+    <pre>
+        <code>
+      num = int(input("Digite um número: "))
+      if num % 2 == 0:
+          print("Número par")
+      else:
+          print("Número ímpar")
+      print("Fim do programa")
+        </code>
+      </pre>
+  </strong>
+  <hr>
+  <h2>Citação / Citação Completa</h2>
+  <p>Utilizamos a tag <span>&lt;Q&gt;</span> para citações: <strong><q>O Computador é um burro muito rápido</q></strong>
+  </p>
+  <p>Utilizamos a tag <span>&lt;BLOCKQUOTE&gt;</span> para citações completas:
+  <blockquote cite="https://wbruno.com.br/opiniao/diferenca-entre-cara-programa-um-programador/">
+    <strong><q>A Diferença entre um programador e um não programador é que o programador sabe como fazer o computador
+        trabalhar para ele, enquanto o não programador trabalha para o computador.</q></strong>
+  </blockquote>
+  </p>
+  </p>
+  <h2>Abreviações</h2>
+  <p>Utilizamos a tag <span>&lt;ABBR&gt;</span> para abreviações: <strong><abbr
+        title="Linguagem de Marcação de Hipertexto">HTML</abbr></strong>, <strong><abbr
+        title="Folhas de Estilo em Cascatas">CSS</abbr></strong> e <strong><abbr
+        title="Linguagem de Programação">JS</abbr></strong>.</p>
+</body>
+
+</html>
