@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Áudio no Site</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      code {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Trabalhando com Áudio</h1>
+    <p>
+      Nesta aula, vamos aprender como incorporar áudio em um site usando a tag
+      <code>&lt;audio&gt;</code>
+      do HTML5. Ela permite que você adicione arquivos de áudio ao seu site,
+      proporcionando uma melhor experiência ao usuário.
+    </p>
+    <!-- <audio src="audios/the_grey_room.mp3" controls></audio> | OPÇÃO 1 -->
+    <audio preload="metadata" controls>
+      <source src="audios/the_grey_room.mp3" type="audio/mpeg" />
+      <source src="audios/the_grey_room.ogg" type="audio/ogg" />
+      <source src="audios/the_grey_room.wav" type="audio/wav" />
+
+      <p>
+        Seu navegador não suporta o elemento de áudio.
+        <a
+          href="audios/the_grey_room.mp3"
+          download="Áudio - The Grey Room "
+          type="audio/mpeg"
+        >
+          Clique aqui para baixar o áudio.
+        </a>
+      </p>
+    </audio>
+  </body>
+</html>
