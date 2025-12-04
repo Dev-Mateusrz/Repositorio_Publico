@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Links e Âncoras</title>
+    <style>
+      body {
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+          Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      p {
+        text-align: justify;
+        font-size: 19px;
+        width: 560px;
+      }
+      a#link {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: royalblue;
+      }
+      a#ancora {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: darkorange;
+      }
+      a#link-baixar {
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 20px;
+        color: green;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Trabalhando com Links e Âncoras</h1>
+    <p>
+      Este é um exemplo de como criar links e âncoras em HTML. Você pode clicar
+      no link abaixo para acessar meu perfil do <strong style="color: rgb(53, 53, 167);">GitHub</strong>. (<strong style="color: rgb(158, 7, 7);">Obs: Uma página externa será aberta ao clicar no link!</strong>)</p>
+
+      <p>&#x1F517 | <a id="link" href="https://github.com/Dev-Mateusrz" lang="pt-BR" target="_blank" rel="external">Link GitHub</a> - Externo</p>
+
+      <p>
+      Você também pode usar âncoras para navegar dentro da mesma página. Clique no link abaixo para ir para a seção de contato.</p>
+      <p>&#x260E&#xFE0F | <a id="ancora" href="contato.html" lang="pt-BR" target="_self" rel="next">Ir para Contato</a> - Interna</p>
+      </p>
+      <p>
+        Além disso, você pode baixar o arquivo desta aula, diretamente clicando no link abaixo.</p>
+      <p>&#x2B07&#xFE0F | <a id="link-baixar" href="arquivos/Aula_006 - Links e Ancoras.pdf" download="Aula_006 - Links e Ancoras" type="application/pdf">Baixar Arquivo PDF</a> - Download</p>
+      </p>
+  </body>
+</html>
